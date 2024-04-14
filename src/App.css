@@ -95,7 +95,7 @@ body {
 
 @media (orientation: landscape) {
   .video-container {
-    padding-top: 20vh; /* 16:9 aspect ratio */
+    padding-top: 50vh; /* 16:9 aspect ratio */
     width: 90%;
     padding-left: 5%;
     padding-right: 5%;
@@ -109,9 +109,9 @@ body {
   height: 100vh;
 }
 
-@media (orientation: portrait) and (max-aspect-ratio: 0.47/1) and (min-aspect-ratio: 0.43/1) {
+@media (orientation: portrait) and (max-aspect-ratio: 0.47/1) and (min-aspect-ratio: 0.4/1) {
   .video-container {
-    padding-top: 30vh; /* Adjust this value as needed */
+    padding-top: 60vh; /* Adjust this value as needed */
   }
 }
 @media (orientation: portrait) and (max-aspect-ratio: 0.43/1) {
