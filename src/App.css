@@ -2,6 +2,7 @@
 
 body {
   font-family: 'M PLUS 1p', sans-serif;
+  font-size: 13pt;
 }
 
 .App {
@@ -88,7 +89,7 @@ body {
 
 @media (orientation: portrait) {
   .video-container {
-    padding-top: 50vh; /* 9:16 aspect ratio */
+    padding-top: 20vh; /* 9:16 aspect ratio */
   }
 }
 
