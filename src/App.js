@@ -1,21 +1,29 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 const Video = () => {
-  const videoRef = useRef(null);
+  const [videoStyle, setVideoStyle] = useState({});
 
-  const handleVideoClick = () => {
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-    } else {
-      videoRef.current.pause();
-    }
-  };
+  useEffect(() => {
+    // Calculate the position of the video element
+    const screenHeight = window.innerHeight;
+    const videoHeight = screenHeight / 2; // Assuming the video height is half of the screen height
+    const videoTop = (screenHeight - videoHeight) / 2;
+
+    // Set the style for the video element
+    setVideoStyle({
+      position: 'absolute',
+      top: `${videoTop}px`,
+      left: '0',
+      width: '100%',
+      height: `${videoHeight}px`,
+    });
+  }, []);
 
   return (
-    <div className="video-container" onClick={handleVideoClick}>
-      <video controls ref={videoRef}>
-      <source src="https://nicolecreative.github.io/logo/nlogo.mp4" type="video/mp4" />
+    <div className="video-container">
+      <video controls style={videoStyle}>
+        <source src="https://nicolecreative.github.io/logo/nlogo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
@@ -25,14 +33,12 @@ const Video = () => {
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
       <main>
         <Video />
       </main>
       <footer className="footer">
         <div>
-          <a href="mailto:nicolebachman12@gmail.com" style={{ color: 'white', textDecoration: 'none' }}>nicolebachman12@gmail.com</a>
+          nicolebachman12@gmail.com
         </div>
         <div>
           nicolebachman.com
