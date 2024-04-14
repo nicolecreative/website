@@ -5,12 +5,10 @@ const Video = () => {
   const [videoStyle, setVideoStyle] = useState({});
 
   useEffect(() => {
-    // Calculate the position of the video element
     const screenHeight = window.innerHeight;
     const videoHeight = screenHeight / 2; // Assuming the video height is half of the screen height
     const videoTop = (screenHeight - videoHeight) / 2;
 
-    // Set the style for the video element
     setVideoStyle({
       position: 'absolute',
       top: `${videoTop}px`,
@@ -31,18 +29,29 @@ const Video = () => {
 };
 
 function App() {
+  useEffect(() => {
+    const handleOrientationChange = () => {
+      window.location.reload(); // Refresh the page when orientation changes
+    };
+
+    window.addEventListener('orientationchange', handleOrientationChange);
+
+    return () => {
+      window.removeEventListener('orientationchange', handleOrientationChange);
+    };
+  }, []);
+
   return (
     <div className="App">
       <main>
         <Video />
       </main>
       <footer className="footer">
-        <div >
+        <div>
           nicolebachman.com
         </div>
         <div>
-        <a href="mailto:nicolebachman12@gmail.com" style={{ color: '#e0e0e0', textDecoration: 'none' }}>nicolebachman12@gmail.com</a>
-
+          <a href="mailto:nicolebachman12@gmail.com" style={{ color: '#e0e0e0', textDecoration: 'none' }}>nicolebachman12@gmail.com</a>
         </div>
       </footer>
     </div>
