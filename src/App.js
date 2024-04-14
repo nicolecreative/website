@@ -7,7 +7,7 @@ const Video = () => (
   <div>
     <h2>Video</h2>
     <video controls>
-      <source src="https://nicolecreative.github.io/logo/nlogo.mp4" type="video/mp4" />
+      <source src="/logo/nlogo.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -29,7 +29,7 @@ const Page2 = () => (
 
 function App() {
   return (
-    <Router>
+    <Router basename="/logo">
       <div className="App">
         <header className="App-header">
           <nav>
