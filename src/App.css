@@ -3,6 +3,8 @@
 body {
   font-family: 'M PLUS 1p', sans-serif;
   font-size: 12pt;
+  color: #e0e0e0;
+  
 }
 
 .App {
@@ -69,8 +71,9 @@ body {
 
 @media (orientation: portrait) {
   .footer {
-    padding-bottom: 10%; /* 10% padding on top and bottom */
-    text-align: center;
+    padding-bottom: 4%; /* 10% padding on top and bottom */
+    text-align: left;
+    padding-left: 10%;
   }
 }
 
@@ -89,14 +92,13 @@ body {
 
 @media (orientation: portrait) {
   .video-container {
-    padding-top: 50vh; /* 9:16 aspect ratio */
+    padding-top: 90vh; /* 9:16 aspect ratio */
   }
 }
 
 @media (orientation: landscape) {
   .video-container {
-    padding-top: 10%; /* 16:9 aspect ratio */
-    width: 100%;
+    padding-top: 80vh; /* 16:9 aspect ratio */
     
   }
 }
@@ -110,11 +112,11 @@ body {
 
 @media (orientation: portrait) and (max-aspect-ratio: 0.47/1) and (min-aspect-ratio: 0.4/1) {
   .video-container {
-    padding-top: 60vh; /* Adjust this value as needed */
+    padding-top: 80vh; /* Adjust this value as needed */
   }
 }
 @media (orientation: portrait) and (max-aspect-ratio: 0.43/1) {
   .video-container {
-    padding-top: 45vh; /* Adjust this value as needed */
+    padding-top: 70vh; /* Adjust this value as needed */
   }
 }
