@@ -99,7 +99,7 @@ body {
 
 @media (orientation: landscape) {
   .video-container {
-    padding-top: 80vh; /* 16:9 aspect ratio */
+    padding-top: 10vh; /* 16:9 aspect ratio */
     
   }
 }
