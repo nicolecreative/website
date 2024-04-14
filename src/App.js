@@ -21,9 +21,9 @@ function App() {
         <Video />
       </main>
       <footer className="footer">
-        <div>
-          nicolebachman12@gmail.com
-        </div>
+      <div>
+      <a href="mailto:nicolebachman12@gmail.com" style={{ color: 'white', textDecoration: 'none' }}>nicolebachman12@gmail.com</a>
+  </div>
         <div>
           nicolebachman.com
         </div>
