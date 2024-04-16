@@ -21,7 +21,7 @@ const Video = () => {
   return (
     <div className="video-container">
       <video controls style={videoStyle}>
-        <source src="https://nicolecreative.github.io/logo/nlogo.mp4" type="video/mp4" />
+        <source src="https://nicolecreative.github.io/logo3/nlogo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
